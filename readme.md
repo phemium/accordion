@@ -27,7 +27,7 @@ Include attribute **slot="content"** to all the content that you want to be insi
 ### Javascript or AngularJS (1.x)
 
 ```
-<script src="https://unpkg.com/@edmbn/accordion@latest/dist/edmbn-accordion.js"></script>
+<script src="https://unpkg.com/@edmbn-wc/accordion@latest/dist/edmbn-accordion.js"></script>
 ```
 
 ### Angular 2+
