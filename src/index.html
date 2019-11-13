@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/edmbn-accordion.esm.js"></script>
+    <script nomodule src="/build/edmbn-accordion.js"></script>
+  </head>
+  <body>
+    <style>
+      .box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1px;
+        height: auto;
+      }
+      .item {
+        border-bottom: 2px solid #777e87;
+        padding: 1rem;
+      }
+    </style>
+    <edmbn-accordion
+      style="margin-bottom: 10px"
+      bordered
+      header-title="Header Title"
+    >
+      <div slot="content" class="box">
+        <span class="item">Item</span>
+        <span class="item">Item</span>
+        <span class="item">Item</span>
+        <span class="item">Item</span>
+        <span class="item">Item</span>
+        <span class="item">Item</span>
+      </div>
+    </edmbn-accordion>
+    <edmbn-accordion
+      style="margin-bottom: 10px"
+      header-title="Header Title"
+      expanded="true"
+      lost-focus-close="true"
+    >
+      <div slot="content" class="box"><span class="item">Item</span></div>
+    </edmbn-accordion>
+  </body>
+</html>

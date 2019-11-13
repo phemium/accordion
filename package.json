@@ -1,0 +1,45 @@
+{
+  "name": "@edmbn/accordion",
+  "version": "1.0.0",
+  "description": "Accordion web component built with Stencil One.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/edmbn-accordion/edmbn-accordion.js",
+  "homepage": "https://github.com/edmbn/accordion/#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edmbn/accordion.git"
+  },
+  "keywords": [
+    "accordion",
+    "expansion",
+    "panel",
+    "web",
+    "component"
+  ],
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.1.6",
+    "@stencil/postcss": "^1.0.1"
+  },
+  "dependencies": {
+    "@types/node": "^12.0.8",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.0.4"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,49 @@
+:host {
+  --header-height: 50px;
+  --header-background-color: white;
+  --header-button-color: black;
+  --header-button-width: 1.5rem;
+  --header-text-color: black;
+  --header-font-weight: 700;
+  --header-font-size: 1rem;
+  --header-border-top: var(--border-width) var(--border-style) var(--border-color);
+  --header-border-bottom: var(--border-width) var(--border-style) var(--border-color);
+  --header-border-left: none;
+  --header-border-right: none;
+  --border-style: solid;
+  --border-width: 1px;
+  --border-color: #ccc;
+}
+
+:host([expanded]) #headerButton {
+  transform: rotate(180deg);
+}
+
+:host([bordered]) .header {
+  border-bottom: var(--header-border-bottom);
+  border-top: var(--header-border-top);
+  border-right: var(--header-border-right);
+  border-left: var(--header-border-left);
+}
+
+#main {
+  transition: height 0.3s ease-out;
+  min-height: var(--header-height);
+}
+
+#headerButton {
+  transition: transform 0.3s ease-out;
+}
+
+.header {
+  background: var(--header-background-color);
+  color: var(--header-text-color);
+  font-weight: var(--header-font-weight);
+  font-size: var(--header-font-size);
+  height: var(--header-height);
+}
+
+.header-button {
+  fill: var(--header-button-color);
+  width: var(--header-button-width);
+}
