@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
- npm i edmbn-accordion
+ npm i @edmbn-wc/accordion
 ```
 
 ## Usage
