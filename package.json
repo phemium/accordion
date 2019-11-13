@@ -15,6 +15,9 @@
     "type": "git",
     "url": "https://github.com/edmbn/accordion.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "accordion",
     "expansion",
