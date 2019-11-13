@@ -1,5 +1,5 @@
 {
-  "name": "@edmbn/accordion",
+  "name": "@edmbn-wc/accordion",
   "version": "1.0.0",
   "description": "Accordion web component built with Stencil One.",
   "main": "dist/index.js",
