@@ -14,6 +14,7 @@ export namespace Components {
     'expanded': boolean;
     'headerTitle': string;
     'lostFocusClose': boolean;
+    'observeContent': boolean;
   }
 }
 
@@ -36,6 +37,7 @@ declare namespace LocalJSX {
     'expanded'?: boolean;
     'headerTitle'?: string;
     'lostFocusClose'?: boolean;
+    'observeContent'?: boolean;
   }
 
   interface IntrinsicElements {

@@ -1,6 +1,6 @@
 {
-  "name": "@edmbn-wc/accordion",
-  "version": "1.0.0",
+  "name": "@phemium-costaisa/accordion",
+  "version": "1.0.2",
   "description": "Accordion web component built with Stencil One.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -15,6 +15,7 @@
     "type": "git",
     "url": "https://github.com/edmbn/accordion.git"
   },
+  "private": false,
   "publishConfig": {
     "access": "public"
   },

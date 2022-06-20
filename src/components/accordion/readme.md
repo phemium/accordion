@@ -1,7 +1,5 @@
 # edmbn-accordion
 
-
-
 <!-- Auto Generated Below -->
 
 
@@ -13,6 +11,7 @@
 | `expanded`       | `expanded`         |             | `boolean` | `false`     |
 | `headerTitle`    | `header-title`     |             | `string`  | `undefined` |
 | `lostFocusClose` | `lost-focus-close` |             | `boolean` | `false`     |
+| `observeContent` | `observe-content`  |             | `boolean` | `false`     |
 
 
 ----------------------------------------------

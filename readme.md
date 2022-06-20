@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
- npm i @edmbn-wc/accordion
+ npm i @phemium-costaisa/accordion
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ Include attribute **slot="content"** to all the content that you want to be insi
 ### Javascript or AngularJS (1.x)
 
 ```
-<script src="https://unpkg.com/@edmbn-wc/accordion@latest/dist/edmbn-accordion.js"></script>
+<script src="./plugins/edmbn-accordion.js"></script>
 ```
 
 ### Angular 2+
@@ -37,7 +37,6 @@ Somewhere in your project (e.g. `main.ts`):
 ```
 import { defineCustomElements as accordionLoader } from 'edmbn-accordion/loader';
 accordionLoader(window);
-
 ```
 
 ### React
@@ -65,6 +64,14 @@ accordionLoader(window);
 |     `expanded`     | `false` |            Set the default position.            |
 |     `bordered`     | `false` | Set border top and bottom by default on header. |
 | `lost-focus-close` | `false` | Whether to close accordion when loosing focus.  |
+| `observe-content`  | `false` |      Set to true when content is dynamic.       |
+
+## Slots
+
+| Name      | Description                                           |
+| --------- | ----------------------------------------------------- |
+| `content` | `HTML Content to put inside accordion when unfolded`  |
+| `right`   | `HTML Content to put in the right part of the header` |
 
 ## Customize CSS
 
@@ -88,8 +95,8 @@ accordionLoader(window);
 ## Contribute
 
 ```bash
-git clone https://github.com/edmbn/accordion.git
-cd edmbn-accordion
+git clone https://github.com/phemium/accordion.git
+cd accordion
 ```
 
 and run:
