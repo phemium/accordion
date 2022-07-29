@@ -8,6 +8,7 @@
 | Property         | Attribute          | Description | Type      | Default     |
 | ---------------- | ------------------ | ----------- | --------- | ----------- |
 | `bordered`       | `bordered`         |             | `boolean` | `false`     |
+| `debug`          | `debug`            |             | `boolean` | `false`     |
 | `expanded`       | `expanded`         |             | `boolean` | `false`     |
 | `headerTitle`    | `header-title`     |             | `string`  | `undefined` |
 | `lostFocusClose` | `lost-focus-close` |             | `boolean` | `false`     |
