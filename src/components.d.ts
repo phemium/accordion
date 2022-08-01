@@ -11,6 +11,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface EdmbnAccordion {
     'bordered': boolean;
+    'debug': boolean;
     'expanded': boolean;
     'headerTitle': string;
     'lostFocusClose': boolean;
@@ -34,6 +35,7 @@ declare global {
 declare namespace LocalJSX {
   interface EdmbnAccordion extends JSXBase.HTMLAttributes<HTMLEdmbnAccordionElement> {
     'bordered'?: boolean;
+    'debug'?: boolean;
     'expanded'?: boolean;
     'headerTitle'?: string;
     'lostFocusClose'?: boolean;

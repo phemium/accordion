@@ -65,6 +65,7 @@ accordionLoader(window);
 |     `bordered`     | `false` | Set border top and bottom by default on header. |
 | `lost-focus-close` | `false` | Whether to close accordion when loosing focus.  |
 | `observe-content`  | `false` |      Set to true when content is dynamic.       |
+|      `debug`       | `false` |         Set to true for debugging logs.         |
 
 ## Slots
 

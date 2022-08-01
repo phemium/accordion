@@ -27,19 +27,34 @@ export class Accordion {
     }
   }
 
-  @Prop({ reflectToAttr: true }) expanded = false;
-  @Prop({ reflectToAttr: true }) bordered = false;
-  @Prop({ reflectToAttr: true }) observeContent = false;
+  @Prop({ reflect: true }) expanded = false;
+  @Prop({ reflect: true }) bordered = false;
+  @Prop({ reflect: true }) observeContent = false;
+  @Prop({ reflect: true }) debug = false;
   @Prop() headerTitle: string;
   @Prop() lostFocusClose = false;
 
   htmlObserver: MutationObserver;
 
+  log(...msg: any[]) {
+    if (this.debug) {
+      console.log("[edmbn-accordion]", ...msg);
+    }
+  }
+
   componentDidLoad() {
+    this.log("componentDidLoad()");
     this.expanded = !this.expanded;
     this.expandContent();
+    console.log("Parameters:", {
+      expanded: this.expanded,
+      bordered: this.bordered,
+      observeContent: this.observeContent,
+      debug: this.debug,
+    });
     if (this.observeContent) {
       const contentSlot = this.el.querySelector("[slot=content]");
+      this.log("contentSlot:", contentSlot);
       if (contentSlot) {
         this.htmlObserver = new MutationObserver(() =>
           this.updateContentHeight()
@@ -48,34 +63,45 @@ export class Accordion {
           childList: true,
           subtree: true,
         });
+        if (this.expanded) {
+          // Update accordion height after content has been loaded
+          setTimeout(() => {
+            this.updateContentHeight();
+          });
+        }
       }
     }
   }
 
   componentDidUnload() {
+    this.log("componentDidUnload()");
     if (this.htmlObserver) this.htmlObserver.disconnect();
   }
 
   expandContent() {
+    this.log("expandContent()");
     const headerHeight = this.header.offsetHeight;
-    if (this.expanded) {
-      this.main.style.height = `${headerHeight}px`;
-      this.expanded = false;
-    } else {
+    let newHeight = `${headerHeight}px`;
+    if (!this.expanded) {
       const contentHeight = this.content.offsetHeight;
-      this.main.style.height = `${headerHeight + contentHeight}px`;
-      this.expanded = true;
+      newHeight = `${headerHeight + contentHeight}px`;
     }
+    this.main.style.height = newHeight;
+    this.expanded = !this.expanded;
+    this.log("newHeight:", newHeight);
   }
 
   updateContentHeight() {
+    this.log("updateContentHeight()");
     const headerHeight = this.header.offsetHeight;
+    this.log("headerHeight:", headerHeight);
+    let newHeight = `${headerHeight}px`;
     if (this.expanded) {
       const contentHeight = this.content.offsetHeight;
-      this.main.style.height = `${headerHeight + contentHeight}px`;
-    } else {
-      this.main.style.height = `${headerHeight}px`;
+      newHeight = `${headerHeight + contentHeight}px`;
     }
+    this.log("newHeight:", newHeight);
+    this.main.style.height = newHeight;
   }
 
   render() {
